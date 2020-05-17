@@ -265,10 +265,8 @@ h1, h2, h3, h4, h5, h6, p, span, li, a {
   vertical-align: middle;
 }
 
-.main-it-1, .main-it-3 {
-  margin: 0 45px;
-  background-origin: border-box;
-  width: 150px;
+.main-it {
+
 }
 
 .main-it-2 {
@@ -277,8 +275,6 @@ h1, h2, h3, h4, h5, h6, p, span, li, a {
 }
 
 .main-it-1 div {
-  display: block;
-  width: 150px;
   height: 150px;
   background: url("img/layer-3.png") no-repeat;
   background-size: cover;
@@ -308,9 +304,7 @@ h1, h2, h3, h4, h5, h6, p, span, li, a {
 }
 
 .main-content article div {
-  width: 100%;
   border-radius: 50%;
-  margin-bottom: 20px;
 }
 
 .main-content article h3 {
@@ -318,7 +312,7 @@ h1, h2, h3, h4, h5, h6, p, span, li, a {
   text-transform: uppercase;
 }
 
-.main-content > div {
+.main-content figure {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -334,4 +328,24 @@ h1, h2, h3, h4, h5, h6, p, span, li, a {
 
 .arr-right {
   background: url("img/ic_arrow.png") center no-repeat;
+}
+
+/* ---------ADEEE-------- */
+
+.main-it {
+  position: relative;
+  margin: 0 45px;
+  width: 150px;
+}
+
+.main-it h3 {
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 170px;
+}
+
+.main-it-1 > *, .main-it-3 > * {
+  display: inline-block;
+  vertical-align: middle;
 }
