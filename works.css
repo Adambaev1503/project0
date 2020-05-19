@@ -87,7 +87,6 @@ h1, h2, h3, h4, h5, h6, p, span, li, a {
 .logo * {
   display: inline-block;
   vertical-align: middle;
-  text-transform: uppercase;
 }
 
 .logo img {
@@ -97,7 +96,7 @@ h1, h2, h3, h4, h5, h6, p, span, li, a {
 
 .logo h3 {
   margin-left: 10px;
-  font: small-caps 17px/17px "montserratbold", arial, sans-serif;
+  font: small-caps 1000 20px/20px "montserrat", arial, sans-serif;
 }
 
 .top-button {
@@ -112,7 +111,7 @@ h1, h2, h3, h4, h5, h6, p, span, li, a {
 
 .secondary-nav div {
   display: inline-block;
-  padding: 5px 0 5px 5px;
+  padding: 5px 5px 5px 5px;
   position: relative;
 }
 
@@ -125,10 +124,14 @@ h1, h2, h3, h4, h5, h6, p, span, li, a {
 }
 
 .secondary-nav div p {
-  width: 25px;
+  width: 23px;
   height: 2px;
   margin-bottom: 5px;
   background-color: #fff;
+}
+
+.secondary-nav div:hover {
+  background-color: #282828;
 }
 
 .secondary-nav div p:nth-of-type(2n) {
@@ -145,22 +148,36 @@ h1, h2, h3, h4, h5, h6, p, span, li, a {
   display: none;
   position: absolute;
   right: 0;
-  top: 28px;
+  top: 33px;
   z-index: 10;
+}
+
+.secondary-nav ul li {
+  line-height: 1.5em;
+  text-transform: none;
+}
+
+.secondary-nav ul li:hover {
+  font-size: 18px;
+}
+
+.secondary-nav ul li a {
+  text-decoration: none;
 }
 
 #secondary-nav-inp:checked ~ ul {
   display: block;
 }
 
-/* --------Main Content----------- */
-.main-container {
-  /* position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%; */
+#secondary-nav-inp:checked ~ div {
+  background-color: #282828;
 }
 
+#secondary-nav-inp:checked ~ div label {
+  cursor: default;
+}
+
+/* --------Main Content----------- */
 .main-container > * {
   display: inline-block;
   vertical-align: middle;
@@ -220,12 +237,6 @@ h1, h2, h3, h4, h5, h6, p, span, li, a {
   padding-left: 20px;
 }
 
-/* .primary-nav ul li:first-child .nav-it-3::before {
-  content: "01";
-  position: absolute;
-  left: 0;
-} */
-
 .primary-nav ul li:nth-child(2) .nav-it-3::before {
   content: "02";
   position: absolute;
@@ -241,13 +252,16 @@ h1, h2, h3, h4, h5, h6, p, span, li, a {
 .main-content h2 {
   font: 30px/30px "montserratbold", arial, sans-serif;
 }
-.main-content > :not(h2) {
+
+.main-content > article {
   display: inline-block;
   vertical-align: middle;
 }
 
 .main-it {
-
+  position: relative;
+  margin: 0 45px;
+  width: 150px;
 }
 
 .main-it-2 {
@@ -255,23 +269,25 @@ h1, h2, h3, h4, h5, h6, p, span, li, a {
   width: 300px;
 }
 
+.main-content article div {
+  border-radius: 50%;
+  background-size: cover;
+}
+
 .main-it-1 div {
   height: 150px;
   background: url("img/layer-3.png") no-repeat;
-  background-size: cover;
 }
 
 .main-it-2 div {
   height: 300px;
   background: url("img/layer-1.png") no-repeat;
-  background-size: cover;
   margin: 40px 0;
 }
 
 .main-it-3 div {
   height: 150px;
   background: url("img/layer-2.png") no-repeat;
-  background-size: cover;
 }
 
 .main-it-2 h3 {
@@ -288,10 +304,6 @@ h1, h2, h3, h4, h5, h6, p, span, li, a {
   font-size: 12px;
   color: #555;
   margin-top: 20px;
-}
-
-.main-content article div {
-  border-radius: 50%;
 }
 
 .main-content article h3 {
@@ -323,14 +335,7 @@ h1, h2, h3, h4, h5, h6, p, span, li, a {
   background-color: #282828;
 }
 
-
-/* ---------ADEEE 1-------- */
-
-.main-it {
-  position: relative;
-  margin: 0 45px;
-  width: 150px;
-}
+/* ---------Iframes-------- */
 
 iframe {
   display: none;
@@ -361,6 +366,6 @@ label {
   cursor: pointer;
 }
 
-input:checked ~ iframe {
+#home:checked ~ .home {
   display: block;
 }

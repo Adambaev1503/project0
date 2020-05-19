@@ -12,26 +12,18 @@ body {
   color: #fff;
 }
 
-a {
-  color: #fff;
-}
-
-h3 {
-  font-family: "montserratblack";
-}
-
-h1 {
-  font-family: "montserratbold";
-  font-size: 68px;
-}
-
 .container {
-  width: 1120px;
+  width: 1230px;
   margin: 0 auto;
-  padding: 0 30px;
 }
 
-/* Clearfix */
+.grid {
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ----------------- Clearfix --------------- */
 
 .group::before,
 .group::after {
@@ -48,219 +40,335 @@ h1 {
   *zoom: 1;
 }
 
-.logo {
+/* ------- Fonts ------ */
+
+h1, h2, h3, h4, h5, h6, a, li {
+  color: #fff;
+  font-family: "montserrat", arial, sans-serif;
+}
+
+/* Buttons */
+
+.btn {
+  font-variant: small-caps;
+  text-decoration: none;
+}
+
+.btn-primary {
+  /* background-color: #0f33ff; */
+  /* padding: 10px 20px; */
+}
+
+/* --------- Header ------------- */
+
+.main-header {
+  margin-top: 20px;
   position: relative;
-  float: left;
-  font-family: 'montserratblack';
-  text-transform: uppercase;
+  z-index: 1;
+}
+.main-header * {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.logo {
+  width: 50%;
 }
 
 .logo h3 {
-  position: absolute;
-  margin-top: 10px;
-  margin-left: 10px;
+  font: small-caps 1000 20px/20px "montserrat", arial, sans-serif;
+  padding-left: 10px;
 }
 
-.logo h3:hover {
-  color: #fff498;
+.logo img {
+  width: 33px;
+  height: 33px;
 }
 
-.logo * {
-  display: inline-block;
-}
-
-.header {
-  text-align: right;
-  padding: 20px 30px;
-  margin-bottom: 20px;
-}
-
-.header a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.header-nav {
+.secondary-nav {
   position: relative;
-  display: inline-block;
+  width: 50%;
+  text-align: right;
 }
 
-.header-nav > li {
-  display: inline-block;
-  width: 25px;
-  text-align: center;
-  margin-top: 9px;
-}
-
-.header-nav > li a {
+.small-nav p {
   display: block;
+  margin-top: 5px;
+  width: 23px;
+  height: 2px;
+  background: #fff;
 }
 
-.header-nav > li p {
+.small-nav p:first-child {
+  margin-top: 0;
+}
+
+.small-nav p:nth-child(2) {
   width: 15px;
-  border-top: 2px solid #fff;
-  margin: 0 auto 5px auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.header-nav > li p:first-child {
-  width: 25px;
-}
-
-.header-nav > li p:last-child {
-  width: 25px;
-  margin-bottom: 0;
-}
-
-.inner-nav {
-  display: none;
+.secondary-nav ul {
   position: absolute;
   right: 0;
+  top: 33px;
+  display: none;
 }
 
-.inner-nav li {
-  margin-top: 20px;
-}
-.inner-nav li a {
-  text-transform: uppercase;
-}
-.inner-nav li:hover a {
-  color: #fff498;
-}
-.header-nav li:hover p{
-  border-color: #fff498;
+.secondary-nav ul li {
+  display: block;
+  line-height: 1.5em;
 }
 
-.header-nav:hover .inner-nav {
+.secondary-nav ul li:hover {
+  font-size: 18px;
+}
+
+.secondary-nav ul li a {
+  text-decoration: none;
+}
+
+.small-nav {
+  position: relative;
+  padding: 5px;
+}
+
+.small-nav label {
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  cursor: pointer;
+}
+
+#secondary-nav {
+  display: none;
+}
+
+#secondary-nav:checked ~ ul {
   display: block;
 }
 
-.primary-nav {
-
+#secondary-nav:checked ~ .small-nav {
+  background-color: #282828;
 }
 
-.main-it-1, .main-it-3{
+#secondary-nav:checked ~ .small-nav label {
+  cursor: default;
+}
+
+/* --------Main Content----------- */
+.main-container > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* --------Navigation----------- */
+.main-navigation {
   width: 10%;
 }
 
-.main-it-2 {
-  width: 75%;
-  border-bottom: 2px solid #555;
+.primary-nav {
+  box-sizing: content-box;
+  margin: 15vh 0;
+  height: 70vh;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: min-content 1px min-content;
-  grid-column-gap: 10px;
+.primary-nav ul {
+  height: 100%;
 }
 
-.grid-it {
-  padding: 20px 0;
+.primary-nav ul li {
+  height: 20%;
 }
 
-.grid-it-1, .grid-it-3 {
-  justify-content: center;
-  align-self: center;
+.primary-nav ul li p {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  opacity: .35;
 }
 
-.grid-it-2 {
-  display: inline-grid;
-  background-color: #555;
-  align-content: center;
+.primary-nav .active p.nav-it-2,  .primary-nav .active p.nav-it-3 {
+  opacity: 1;
 }
 
-.grid-it-2 span {
-  display: block;
-  height: 5px;
-  width: 5px;
-  background-color: #555;
+.primary-nav .active p.nav-it-2 {
+  background: #0f33ff;
+}
+
+.primary-nav .nav-it-1 {
+  height: 100%;
+  width: 2px;
+  background: #555;
+  opacity: .35;
+}
+
+.primary-nav .nav-it-2 {
+  width: 3px;
+  height: 3px;
+  background: #fff;
   border-radius: 50%;
   margin-left: -2px;
+  position: relative;
+  z-index: 1;
 }
 
-.active-span span {
-  background-color: #fff498;
+.primary-nav .nav-it-3 {
+  padding-left: 20px;
 }
 
-.main-it {
-  float: left;
-  margin-right: 20px;
+.primary-nav ul li:first-child .nav-it-3::before {
+  content: "01";
+  position: absolute;
+  left: 0;
 }
 
-.main-it:last-child {
-  margin-right: 0;
+/* ------------MainContent-------------- */
+
+.main-content {
+  width: 80%;
 }
 
-.main-text {
-  font-weight: 900;
-  width: 50%;
-  float: left;
+.main-content aside {
+  position: relative;
 }
 
-.main-img {
-  float: left;
-  width: 50%;
-  margin-bottom: -2px;
+.main-content aside::before {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 30px;
+  right: 43px;
+  height: 2px;
+  background-color: #282828;
 }
 
-.main-img img {
-  float: right;
-  margin-top: -50px;
-  width:
+.main-content aside::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  bottom: 1px;
+  left: 43px;
+  width: 30px;
+  background-color: #0f33ff;
 }
 
-.foo-cont {
-  width: 75%;
-}
-.foo-it {
-  margin: 40px 3% 0 0;
+.main-content aside > * {
+  vertical-align: middle;
   display: inline-block;
-  width: 30%;
 }
 
-.foo-it:last-child {
-  margin-right: 0;
+.main-content aside > div {
+  width: 400px;
+  margin-left: 43px;
 }
 
-.foo-cont {
-  margin: 0 auto;
+.main-content h2 {
+  font: 68px/68px "montserratblack", arial, sans-serif;
+  margin-bottom: 40px;
 }
 
-.foo-it a {
-  color: #555;
-  text-decoration: none;
-}
-
-.foo-it a:hover {
-  color: #fff498;
-}
-
-.foo-it h3 {
-  font-family: "montserrat";
-  font-size: 16px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-
-.foo-it p {
-  font-family: "montserrat";
-  line-height: 22px;
-}
-
-
-.btn {
+.main-content aside a {
+  width: 110px;
+  height: 30px;
   display: inline-block;
-  text-decoration: none;
-  padding: 20px 40px;
-  border: 1px solid #fff;
+  position: relative;
+  line-height: 28px;
+  font-size: 17px;
+  font-family: "montserratbold", arial, sans-serif;
+  background: url("img/ic_arrow.png") 80% no-repeat;
+  text-indent: 10px;
 }
 
-.btn-alt {
+.main-content aside p {
+  width: 85px;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #0f33ff;
+  z-index: -1;
+}
+
+.main-content .btn-primary:hover p {
+  width: 100%;
+}
+
+.articles > * {
+  width: 33.33%;
+  display: inline-block;
+  color: #fff;
+}
+
+.articles a {
+  display: block;
+  text-decoration: none;
+  padding-left: 43px;
+}
+
+.articles h3 {
   margin-top: 40px;
-  text-transform: uppercase;
+  font-size: 19px;
+  font-variant: small-caps;
+  opacity: .15;
+  font-family: "montserratblack", arial, sans-serif;
 }
 
-.btn-alt:hover {
-  border: 1px solid #fff498;
-  color: #fff498;
-  box-shadow: #fff498 0px 0px 10px 5px;
+.articles p {
+  margin-top: 20px;
+  width: 80%;
+  font-size: 15px;
+  opacity: .15;
+  line-height: 1.5em;
+}
+
+.articles article:hover h3, .articles article:hover p{
+  opacity: 1;
+}
+
+/* ---------IFRAME---------- */
+
+iframe {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+input {
+  display: none;
+}
+
+label {
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  cursor: pointer;
+}
+
+.nav-it-2, .nav-it-3 {
+  position: relative;
+}
+
+.primary-nav .active .nav-it-3 {
+  position: static;
+}
+
+#works:checked ~ iframe[src="works.html"] {
+  display: block;
+  z-index: 10;
+}
+
+#works:checked ~ :not(iframe[src="works.html"]) {
+  display: none;
 }

@@ -9,112 +9,85 @@
 
   </head>
   <body>
-    <header class="header group container">
-      <a href="#" class="logo">
-        <img src="img/logo.png" alt="" width="33" height="32"><!--
+    <header class="main-header container group">
+      <div class="logo">
+        <a href="#">
+        <img src="img/logo.png" alt=""><!--
         --><h3>global</h3>
-      </a>
-      <ul class="header-nav">
-        <li>
-          <a href="#">
+        </a>
+      </div><!--
+      --><div class="secondary-nav">
+        <input id="secondary-nav" type="checkbox" name="" value="" hidden>
+        <div class="small-nav">
           <p></p>
           <p></p>
           <p></p>
-          </a>
-        </li>
-        <ul class="inner-nav">
-          <li><a href="#">home</a></li>
-          <li><a href="#">works</a></li>
-          <li><a href="#">about us</a></li>
-          <li><a href="#">contacts</a></li>
-          <li><a href="#">hire us</a></li>
+          <label for="secondary-nav"></label>
+        </div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Works</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contacts</a></li>
+          <li><a href="#">Hire Us</a></li>
         </ul>
-      </ul>
+      </div>
     </header>
-    <section class="main container group">
-      <nav class="primary-nav main-it main-it-1">
-        <div class="grid">
-          <div class="grid-it grid-it-1">
-            <p>01</p>
-          </div>
-          <div class="grid-it grid-it-2 active-span">
-            <span></span>
-          </div>
-          <div class="grid-it grid-it-3">
-            <p>Home</p>
-          </div>
-          <div class="grid-it grid-it-1">
-            <p></p>
-          </div>
-          <div class="grid-it grid-it-2">
-            <span></span>
-          </div>
-          <div class="grid-it grid-it-3">
-            <p>02</p>
-          </div>
-          <div class="grid-it grid-it-1">
-            <p></p>
-          </div>
-          <div class="grid-it grid-it-2">
-            <span></span>
-          </div>
-          <div class="grid-it grid-it-3">
-            <p>03</p>
-          </div>
-          <div class="grid-it grid-it-1">
-            <p></p>
-          </div>
-          <div class="grid-it grid-it-2">
-            <span></span>
-          </div>
-          <div class="grid-it grid-it-3">
-            <p>04</p>
-          </div>
-          <div class="grid-it grid-it-1">
-            <p></p>
-          </div>
-          <div class="grid-it grid-it-2">
-            <span></span>
-          </div>
-          <div class="grid-it grid-it-3">
-            <p>05</p>
-          </div>
-        </div>
-      </nav><!--
-      --><section class="main-it main-it-2">
-        <div class="main-text">
-          <h1>Your next interactive experience</h1>
-          <a href="#" class="btn btn-alt">Hire us</a>
-        </div><!--
-        --><div class="main-img">
-          <img src="img/img.png" alt="">
-        </div>
-      </section><!--
-      --><section class="main-it main-it-3">
-
-      </section>
-    </section>
-    <footer class="container">
-      <section class="foo-cont">
-        <section class="foo-it foo-it-1">
-          <a href="#">
-            <h3>Metiew & Smith</h3>
-            <p>Lorem ipsum dolor sit amet, consecteur adipisicing elit sed do.</p>
-          </a>
-        </section><!--
-        --><section class="foo-it foo-it-2">
-          <a href="#">
-            <h3>Fantasy Intercative</h3>
-            <p>Lorem ipsum dolor sit amet, consecteur adipisicing elit sed do.</p>
-          </a>
-        </section><!--
-        --><section class="foo-it foo-it-2">
-          <a href="#">
-            <h3>Paul & Shark</h3>
-            <p>Lorem ipsum dolor sit amet, consecteur adipisicing elit sed do.</p>
-          </a>
+    <input id="works" type="checkbox" name="" value="" hidden>
+    <input id="aboutus" type="checkbox" name="" value="" hidden>
+    <input id="contacts" type="checkbox" name="" value="" hidden>
+    <input id="hireus" type="text" name="" value="" hidden>
+    <iframe src="works.html" width="" height=""></iframe>
+    <iframe src="aboutus.html" width="" height=""></iframe>
+    <iframe src="contacts.html" width="" height=""></iframe>
+    <iframe src="hireus.html" width="" height=""></iframe>
+    <section style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+      <section class="grid">
+        <section class="container main-container">
+          <section class="main-navigation">
+            <nav class="primary-nav">
+              <ul>
+                <li class="active"><p class="nav-it-1"></p><p class="nav-it-2"></p><p class="nav-it-3">Home</p></li>
+                <li><p class="nav-it-1"></p><p class="nav-it-2"><label for="works"></label></p><p class="nav-it-3"><label for="works"></label>02</p></li>
+                <li><p class="nav-it-1"></p><p class="nav-it-2"><label for="aboutus"></label></p><p class="nav-it-3"><label for="aboutus"></label>03</p></li>
+                <li><p class="nav-it-1"></p><p class="nav-it-2"><label for="contacts"></label></p><p class="nav-it-3"><label for="contacts"></label>04</p></li>
+                <li><p class="nav-it-1"></p><p class="nav-it-2"><label for="hireus"></label></p><p class="nav-it-3"><label for="hireus"></label>05</p></li>
+              </ul>
+            </nav>
+          </section><!--
+          --><section class="main-content">
+            <aside class="">
+              <div class="">
+                <h2>Your next interactive experience</h2>
+                <a href="#" class="btn btn-primary">hire us<p></p></a>
+              </div><!--
+              --><figure>
+                <img src="img/img.png" alt="">
+              </figure>
+            </aside>
+            <div class="articles">
+              <article class="">
+                <a href="#">
+                  <h3>metiew & smith</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
+                </a>
+              </article><!--
+              --><article class="">
+                <a href="#">
+                  <h3>fantasy interactive</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
+                </a>
+              </article><!--
+              --><article class="">
+                <a href="#">
+                  <h3>paul & shark</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
+                </a>
+              </article>
+            </div>
+          </section>
         </section>
       </section>
-    </footer>
+    </section>
   </body>
 </html>
