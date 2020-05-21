@@ -364,11 +364,16 @@ label {
   position: static;
 }
 
-#works:checked ~ iframe[src="works.html"] {
+#works:checked ~ iframe.works {
   display: block;
   z-index: 10;
 }
 
-#works:checked ~ :not(iframe[src="works.html"]) {
+/* #works:checked ~ :not(iframe[src="works.html"]) {
   display: none;
+} */
+
+#aboutus:checked ~ iframe.aboutus {
+  display: block;
+  z-index: 10;
 }

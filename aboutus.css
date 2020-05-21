@@ -189,6 +189,8 @@ h1, h2, h3, h4, h5, h6, p, span, li, a {
 }
 
 .primary-nav {
+  position: absolute;
+  top: 0;
   margin: 15vh 0;
   height: 70vh;
 }
@@ -234,136 +236,182 @@ h1, h2, h3, h4, h5, h6, p, span, li, a {
 }
 
 .primary-nav .nav-it-3 {
-  padding-left: 20px;
+  padding-left: 7px;
 }
 
-.primary-nav ul li:nth-child(2) .nav-it-3::before {
-  content: "02";
+.active .nav-it-3 {
+  padding-left: 12px;
+}
+
+.primary-nav ul li:nth-child(3) .nav-it-3::before {
+  content: "03";
   position: absolute;
-  left: 0;
+  left: -33px;
 }
 
-/* --------Content----------- */
+/* -------------MainContent---------- */
+
 .main-content {
-  text-align: center;
   width: 80%;
 }
-
-.main-content h2 {
-  font: 30px/30px "montserratbold", arial, sans-serif;
+.main-content .main-text {
+  display: inline-block;
+  vertical-align: top;
+  margin: 15vh 0 0 43px;
+  position: relative;
 }
 
-.main-content > article {
+.main-text h2 {
+  font-family: "montserratblack", arial, sans-serif;
+  font-size: 68px;
+  margin-bottom: 50px
+}
+
+.main-text a {
+  display: inline-block;
+}
+
+.main-text a * {
   display: inline-block;
   vertical-align: middle;
 }
 
-.main-it {
-  position: relative;
-  margin: 0 45px;
-  width: 150px;
+.main-text p {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "montserratbold", arial, sans-serif;
 }
 
-.main-it-2 {
-  margin: 0 45px;
-  width: 300px;
+.main-text a code {
+  width: 18px;
+  height: 16px;
+  background: url("img/ic_arrow.png") center no-repeat;
+  background-size: contain;
+  margin-left: 7px;
 }
 
-.main-content article div {
+.main-text a:hover > code {
+  margin-left: 14px;
+}
+
+.main-content img:first-of-type {
+  display: inline-block;
+  position: absolute;
+  right: 182px;
+  top: 0;
+}
+
+.shape {
+  background-color: #0f33ff;
+  position: absolute;
+}
+
+.shape-circle {
   border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  top: 53px;
+  left: 267px;
+}
+
+.shape-square {
+  width: 10px;
+  height: 10px;
+  bottom: 84px;
+  right: 128px;
+}
+
+.shape-rec {
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  top: 25px;
+  right: -15px;
+}
+
+.main-text h2::before {
+  content: "";
+  border: 5px solid #0f33ff;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  transform: rotate(-25deg);
+  top: -30px;
+  left: 200px;
+  position: absolute;
+}
+
+.shape-triangle {
+}
+
+.main-footer {
+  margin-top: 85px;
+}
+
+.news {
+  display: inline-block;
+  position: relative;
+  border: 10px solid #0f33ff;
+  margin-left: 43px;
+}
+
+.news div {
+  width: 150px;
+  height: 80px;
   background-size: cover;
 }
 
-.main-it-1 div {
-  height: 150px;
-  background: url("img/layer-3.png") no-repeat;
-}
-
-.main-it-2 div {
-  height: 300px;
-  background: url("img/layer-1.png") no-repeat;
-  margin: 40px 0;
-}
-
-.main-it-3 div {
-  height: 150px;
-  background: url("img/layer-2.png") no-repeat;
-}
-
-.main-it-2 h3 {
-  margin-bottom: 20px;
-  font-size: 16px;
-}
-
-.main-it-2 p {
-  line-height: 1.5em;
-  font-size: 15px;
-}
-
-.main-it-1 h3, .main-it-3 h3 {
-  font-size: 12px;
-  color: #555;
-  margin-top: 20px;
-}
-
-.main-content article h3 {
-  font-weight: 700;
+.news h3 {
+  position: absolute;
   text-transform: uppercase;
+  font-weight: bold;
+  left: 15px;
 }
 
-.main-content figure {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+.news:hover h3 {
+  bottom: -30px;
 }
 
-.arr-left {
-  top: 50px;
-  position: absolute;
-  left: -95px;
-  background: url("img/ic_arrow_back.png") center no-repeat;
+.news-it-1 {
+  background: url("img/about-winners.jpg") center no-repeat;
 }
 
-.arr-right {
-  top: 50px;
-  position: absolute;
-  right: -95px;
-  background: url("img/ic_arrow.png") center no-repeat;
+.news-it-2 {
+  background: url("img/about-philosophy.jpg") center no-repeat;
 }
 
-.arr-left:hover, .arr-right:hover {
-  background-color: #282828;
+.news-it-3 {
+  background: url("img/about-history.jpg") center no-repeat;
 }
 
-/* ---------Iframes-------- */
+/* -----------IFRAME------------ */
 
 iframe {
   display: none;
   position: absolute;
   width: 100vw;
   height: 100vh;
-  top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
-  z-index: 10;
-}
-
-.nav-it-3 {
-  position: relative;
-}
-
-.active .nav-it-3 {
-  position: static;
+  top: 0;
+  bottom: 0;
 }
 
 label {
   position: absolute;
-  top: -2px;
-  bottom: -2px;
   left: -2px;
+  top: -2px;
   right: -2px;
+  bottom: -2px;
   cursor: pointer;
+}
+
+.nav-it-3, .nav-it-2 {
+  position: relative;
+}
+
+.active .nav-it-3, .active .nav-it-2 {
+  position: static;
 }
 
 #home:checked ~ iframe.home {
@@ -371,7 +419,7 @@ label {
   z-index: 10;
 }
 
-#aboutus:checked ~ iframe.aboutus {
+#works:checked ~ iframe.works {
   display: block;
   z-index: 10;
 }
