@@ -217,3 +217,11 @@ header a.btn {
   line-height: 30px;
   background-color: #ea4c89;
 }
+
+.nav-it-1, .nav-it-3 {
+  opacity: 0.35
+}
+
+.active .nav-it-3 {
+  opacity: 1;
+}
